@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row mt-4">
+        <div class="col">
+            <ul>
+                <li *ngFor="let item of courses">{{item}}</li>
+            </ul>
+        </div>
+        <div class="col">
+            <select name="" id="">
+                <option *ngFor="let item of courses">{{item}}</option>
+            </select>
+        </div>
+        <div class="col" *ngIf="isDisplay">
+            <div *ngFor="let item of courses">
+                <a href="#">{{item}}</a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="btn-group-vertical">
+                <button *ngFor="let item of courses" class="btn btn-primary">{{item}}</button>
+            </div>
+        </div>

@@ -1,0 +1,104 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 ">
+            <img src="{{ product.image }}" alt="" style="width: 400px; height: 400px; margin-top: 40px;">
+            <div class="additional-images">
+              <img *ngFor="let img of product.additionalImages" [src]="img" alt="Additional image" class="additional-image" (mouseover)="changeMainImage(img)">
+              
+          </div>
+          <img [src]="mainImage" alt="" class="main-product-image" style="width: 400px; height: 400px; margin-top:-380px; margin-left: 80px;">
+        </div>
+        <div class="col-md-6" style="margin-top: 40px;">
+            <h2>{{ product.title }}</h2>
+            <p>{{ product.description }}</p>
+            <p><strong>Price:</strong> ₹{{ convertedPrice }}</p>
+            <p><strong>Rating:</strong>{{ product.rating.rate }} ({{ product.rating.count }} ratings)</p>
+            <!-- <p><strong>Size:</strong>&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-outline-secondary btn-size">S</button>&nbsp;
+                <button type="button" class="btn btn-outline-secondary btn-size">M</button>&nbsp;
+                <button type="button" class="btn btn-outline-secondary btn-size">L</button>&nbsp;
+                <button type="button" class="btn btn-outline-secondary btn-size">XL</button>&nbsp;
+                <button type="button" class="btn btn-link" style="text-decoration: none;" (click)="openSizeChart()"><strong>Size Chart</strong></button>
+            </p> -->
+            <button class="btn btn-primary" (click)="addtocart(product)">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" tabindex="-1" role="dialog" [ngClass]="{'show': sizeChartVisible}" [style.display]="sizeChartVisible ? 'block' : 'none'">
+    <div class="modal-dialog custom-modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Size Chart</h5>
+        <button type="button" style="border: 0px; background-color: white; font-size: 25px; padding: 8px 12px;" class="close" aria-label="Close" (click)="closeSizeChart()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            
+     <div class="col-md-6" style="border-right: 1px solid #ccc;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Size</th>
+              <th>Chest</th>
+              <th>Brand Size</th>
+              <th>Shoulder</th>
+              <th>Lenth</th>
+              <th>Waist</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>S</td>
+              <td>38</td>
+              <td>S</td>
+              <td>16.25</td>
+              <td>27.5</td>
+              <td>38</td>
+            </tr>
+            <tr>
+              <td>M</td>
+              <td>40</td>
+              <td>M</td>
+              <td>17</td>
+              <td>28</td>
+              <td>40</td>
+            </tr>
+            <tr>
+              <td>L</td>
+              <td>42</td>
+              <td>L</td>
+              <td>17.75</td>
+              <td>28.5</td>
+              <td>42</td>
+            </tr>
+            <tr>
+              <td>XL</td>
+              <td>44.5</td>
+              <td>XL</td>
+              <td>18.63</td>
+              <td>29</td>
+              <td>44.5</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="col-md-6">
+            <p><b>Measuring T Shirt Size</b><br>
+                Not sure about your t shirt size? Follow these simple steps to figure it out:
+                Shoulder - Measure the shoulder at the back, from edge to edge with arms relaxed on both sides
+                Chest - Measure around the body under the arms at the fullest part of the chest with your arms relaxed at both sides.
+                Sleeve - Measure from the shoulder seam through the outer arm to the cuff/hem
+                Neck - Measured horizontally across the neck Length - Measure from the highest point of the shoulder seam to the bottom hem of the garment's</p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="../assets/shirt.webp" alt="">
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+

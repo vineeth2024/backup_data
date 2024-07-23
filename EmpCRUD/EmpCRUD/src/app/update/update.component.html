@@ -1,0 +1,31 @@
+<h2>Update Employee</h2>
+<div>
+    <form>
+        <div>
+            Eno:
+            <input type="text" readonly [(ngModel)]="employee.Eno" name="eno">
+        </div>
+        <div>
+            Enter Ename:
+            <input type="text" [(ngModel)]="employee.Ename" name="ename">
+        </div>
+        <div>
+            Enter Job:
+            <input type="text" [(ngModel)]="employee.Job" name="job">
+        </div>
+        <div>
+            Enter Salary:
+            <input type="text" [(ngModel)]="employee.Salary" name="salary">
+        </div>
+        <div>
+            Enter Dname:
+            <input type="text" [(ngModel)]="employee.Dname" name="dname">
+        </div>
+        <div>
+            <button (click)="UpdateEmpData(employee)">Update</button>
+        </div>
+    </form>
+</div>
+<div>
+    {{response}}
+</div>

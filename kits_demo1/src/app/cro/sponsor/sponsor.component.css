@@ -1,0 +1,17 @@
+.btn-primary {
+  background-color: #0073aa;
+  border-color: #0073aa;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #cccccc;;
+  border-color: #cccccc;;
+  color: #fff;
+}
+.custom-sponsor-header {
+  color: #757575;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Mada', sans-serif;
+}

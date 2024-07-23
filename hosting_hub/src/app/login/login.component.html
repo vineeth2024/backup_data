@@ -1,0 +1,63 @@
+  <div class="bg-img">
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+            <div class="card" style="width: 26rem; align-items: center;">
+
+                <div class="card-body">
+                    <div>
+                        <img src="../../assets/pbt.png" style="max-width: 200px; margin-left: 70px;"
+                            alt="Logo">
+                    </div>
+                    <br>
+                    <div>
+                        <form  [formGroup]="loginform">
+                            <div>
+                                <label>User Name</label>
+                                <input style="width:350px;" type="text" placeholder="Enter User Name"
+                                    formControlName="emailId"
+                                    [ngClass]="{'is-invalid': submitted && loginform.get('emailId')?.errors}"
+                                    class="form-control">
+                                    <span *ngIf="loginform.get('emailId')?.hasError('required') && loginform.get('emailId')?.touched" class='text-danger' padding>
+                                        User name is required
+                                    </span>
+                            </div>
+
+                            <!-- <div class="col-6 col-md-4">
+                                <div class="form-group">
+                                  <label for="loginUrl">Login URL:</label>
+                                    <input style="font-size: small;" type="text" placeholder="Enter Login URL" class="form-control" [ngClass]="{'is-invalid': submitted && myForm.controls['loginUrl'].errors}"
+                                    formControlName="loginUrl">
+                                    <span *ngIf="loginform.get('loginUrl')?.hasError('required') && loginform.get('loginUrl')?.touched" class='text-danger' padding>Login URL is required</span><br>
+                                </div>
+                              </div> -->
+                            
+                            <div>
+                                <label> Password</label>
+                                <input type="password" placeholder="Enter Password" 
+                                [ngClass]="{'is-invalid': submitted && loginform.get('password')?.errors}"formControlName="password"
+                                    class="form-control">
+                                    <span *ngIf="loginform.get('password')?.hasError('required') && loginform.get('password')?.touched" class='text-danger' padding>
+                                        Password is required
+                                    </span>
+                            </div>
+                            <div *ngIf="!enable && disable">
+                              <label>Enter OTP</label>
+                              <input type="text" placeholder="OTP" formControlName="otp" class="form-control">
+                          </div><br>
+                            <div class="col" *ngIf="enable">
+                                <button type="button" (click)="otp()" class="btn btn-danger"
+                                    style="float: right;width: 100%;">Send OTP</button>
+                            </div>
+                           
+                            <div *ngIf="disable">
+                                <button type="button" style="width: 100%;" (click)="login()"
+                                    class="btn btn-danger">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p-toast></p-toast>
+  

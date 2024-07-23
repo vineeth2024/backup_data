@@ -1,0 +1,116 @@
+
+<div class="container-fluid" style="background-color: #f0f0f0;">
+    <!-- Your existing code here -->
+<br>
+<div class="card-top container-fluid" style="margin-top: -15px;">
+    <div class="container d-flex">
+        <div class="item">
+            <a (click)="filter('')">
+                &nbsp;&nbsp;<img src="../assets/all products.jpg" style="width: 70px; height: 54px; margin-top: 10px;">
+                <h6>All Products</h6>
+            </a>
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="item">
+            <a (click)="filter('electronics')">
+                &nbsp;&nbsp;<img src="../assets/electronics1.webp">
+                <h6>Electronics</h6>
+            </a>
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="item">
+            <a (click)="filter('fashion')">
+            <img src="../assets/fashion1.webp">
+            <h6>Fashion</h6>
+            </a>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="item">
+            <a (click)="filter('jewelery')">
+            <img src="../assets/jewllery1.webp" style="width: 60px; height: 54px; margin-top: 10px;">
+            <h6>Jewllery</h6>
+            </a>
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="item">
+            <a>
+                <img src="../assets/grocery.webp" style="width: 70px; height: 54px; margin-top: 10px;">
+                <h6>&nbsp;&nbsp;Grocery</h6>
+            </a>
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="item">
+            <a>
+                <img src="../assets/Mobiles.webp">
+                <h6>&nbsp;Mobiles</h6>
+            </a>
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="item">
+            <a>
+            <img src="../assets/Home.webp">
+            <h6>&nbsp;&nbsp;&nbsp;Home</h6>
+            </a>
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="item">
+            <a>
+            &nbsp;<img src="../assets/Appliances.webp" style="width: 60px; height: 54px; margin-top: 10px;">
+            <h6>Appliances</h6>
+            </a>
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="item">
+            <a>
+            <img src="../assets/Travel.webp">
+            <h6>&nbsp;&nbsp;Travel</h6>
+            </a>
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="item">
+            <a>
+            &nbsp;&nbsp;<img src="../assets/beauty & toy.webp">
+            <h6>Beauty & Toy</h6>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+<!-- <div class="container-fluid">
+    <div class="image-slider">
+      <img *ngFor="let image of images; let i = index" [src]="image" style="width: 1320px;" [style.opacity]="currentIndex === i ? 1 : 0">
+    </div>
+  </div> -->
+  <div class="container-fluid" style="margin-top: 15px;">
+    <div class="image-slider">
+      <button class="slide-button left" (click)="previousSlide()">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+  
+      <img *ngFor="let image of images; let i = index" [src]="image" style="width: 1320px;" [style.opacity]="currentIndex === i ? 1 : 0">
+  
+      <button class="slide-button right" (click)="nextSlide()">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  
+    <div class="dot-symbols">
+      <span *ngFor="let image of images; let i = index" class="dot" [class.active]="currentIndex === i" (click)="goToSlide(i)"></span>
+    </div>
+  </div>
+  
+  
+  <div class="card" style="margin-left: auto; margin-right: auto; margin-top: 15px;">
+      <h5 class="card-title">Best of Product List</h5>
+    <!-- <div class="card-body"> -->
+      <div class="container" style="margin-top: -40px;">
+        <div class="row">
+          <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+            <div class="card col-md-3">
+              <img src="{{item.image}}" alt="" (click)="showProductDetails(item)">
+              <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{ item.title }}</h5>
+              <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+              <p><strong>Price:</strong> ₹{{getConvertedPrice(item.price)}}</p>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    <!-- </div> -->
+  </div>
+  
+</div>
+
+  

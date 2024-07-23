@@ -1,0 +1,422 @@
+<!--Main Navigation-->
+<header *ngIf="!view1">
+  <!-- Sidebar -->
+  <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse "
+    style="background: linear-gradient(45deg, #19064c, #022638);font-size: small;">
+    <div class="position-sticky">
+      <div class="list-group list-group-flush mx-3 mt-4">
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+          <li class="nav-item">
+            <a style="color: rgb(230, 235, 240);" href="/dashboard" class="nav-link px-0 align-middle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-house"
+                viewBox="0 0 16 16">
+                <path
+                  d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
+              </svg><span class="ms-1 d-none d-sm-inline">Home</span>
+            </a>
+          </li>
+          <li>
+            <a style="color: rgb(230, 235, 240);" href="/admin-profile" class="nav-link px-0 align-middle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                <path fill-rule="evenodd"
+                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+              </svg> <span class="ms-1 d-none d-sm-inline">Admin Profile</span>
+            </a>
+          </li>
+          <li>
+            <a style="color: rgb(230, 235, 240);" href="/customer-grid" class="nav-link px-0 align-middle ">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-people-fill" viewBox="0 0 16 16">
+                <path
+                  d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+              </svg><span class="ms-1 d-none d-sm-inline">Customers</span></a>
+
+          </li>
+          <li>
+            <a style="color: rgb(230, 235, 240);" href="/invoice-grid" class="nav-link px-0 align-middle ">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journals"
+                viewBox="0 0 16 16">
+                <path
+                  d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2 2 2 0 0 1-2 2H3a2 2 0 0 1-2-2h1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1H1a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v9a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z" />
+                <path
+                  d="M1 6v-.5a.5.5 0 0 1 1 0V6h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V9h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 2.5v.5H.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1H2v-.5a.5.5 0 0 0-1 0z" />
+              </svg><span class="ms-1 d-none d-sm-inline">Invoices</span></a>
+
+          </li>
+
+          <li>
+            <a style="color: rgb(230, 235, 240);" href="/product-grid" class="nav-link px-0 align-middle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart"
+                viewBox="0 0 16 16">
+                <path
+                  d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+              </svg> <span class="ms-1 d-none d-sm-inline">Products</span> </a>
+          </li>
+          <li>
+            <a style="color: rgb(230, 235, 240);" href="/a-grid" class="nav-link px-0 align-middle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bank2"
+                viewBox="0 0 16 16">
+                <path
+                  d="M8.277.084a.5.5 0 0 0-.554 0l-7.5 5A.5.5 0 0 0 .5 6h1.875v7H1.5a.5.5 0 0 0 0 1h13a.5.5 0 1 0 0-1h-.875V6H15.5a.5.5 0 0 0 .277-.916l-7.5-5zM12.375 6v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zM8 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM.5 15a.5.5 0 0 0 0 1h15a.5.5 0 1 0 0-1H.5z" />
+              </svg> <span class="ms-1 d-none d-sm-inline">Accounts</span> </a>
+
+          </li>
+          <li>
+            <a style="color: rgb(230, 235, 240);" href="/user-grid" class="nav-link px-0 align-middle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-person-fill" viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+              </svg><span class="ms-1 d-none d-sm-inline">Users</span> </a>
+
+          </li>
+   
+        </ul>
+
+      </div>
+    </div>
+    <p-dialog header="Confirmation" [(visible)]="displayDialog"  [modal]="true" style="border-radius: 90%; ">
+      <p>Are you sure you want to log out?</p>
+      <p-footer>
+        <button type="button" pButton icon="pi pi-check" style="background-color: #19064c;" (click)="logout()" >Yes</button>&nbsp;&nbsp;&nbsp;
+        <button type="button" pButton icon="pi pi-times" style="background-color: #19064c;" (click)="cancelLogout()" >No</button>
+      </p-footer>
+    </p-dialog>              
+    <button   style="height: 20px; width: fit-content; background-color: rgb(42, 42, 54);font-style:roman;border: 1px Solid rgb(23, 23, 35);margin-top:70% ;" pButton type="button" icon="pi pi-power-off" (click)="showDialog()">LOGOUT</button>
+  </nav>
+  <!-- Sidebar -->
+
+  <!-- Navbar -->
+  <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light  fixed-top" style="background: linear-gradient(45deg, #ffff, #0a0a29);box-shadow: 1px 1px 15px rgba(200, 208, 236, 0.825);
+  
+  
+  
+  
+  
+    ">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Toggle button -->
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#sidebarMenu"
+        aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Brand -->
+      <a class="navbar-brand" >
+        <img src="../../assets/pathbreakerlogo.png" height="55" loading="lazy" />
+      </a>
+      <!-- Search form -->
+
+
+      <!-- Right links -->
+      <ul class="navbar-nav ms-auto d-flex flex-row">
+        <!-- Notification dropdown -->
+
+
+        <!-- Icon -->
+        <li class="nav-item me-3 me-lg-0">
+          <a class="nav-link">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+
+
+
+        <!-- Avatar -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+      </ul>
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+</header>
+<p-toast></p-toast>
+<main style="margin-top: 70px;" *ngIf="!view1">
+  <!-- Correct viewport settings -->
+  <div class="container pt-4" style="background-color: #eaeaf1;">
+    <div>
+      <div>
+        <h5>Invoice Details</h5>
+        <div aria-label="breadcrumb" style="float: right;margin-top: -25px;list-style-type: none;">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/dashboard">Dashboard</a></li>
+            <li class="breadcrumb-item active">Invoice</li>
+
+          </ol>
+        </div>
+      </div>
+      <div id="datatable_filter" class="dataTables_filter text-left" style="text-align: left !important;">
+        <label>
+          <input autocomplete="off" type="text" class="form-control" [(ngModel)]="searchText" placeholder="Search "
+            (keyup)="applyFilter(searchText)" />
+        </label>
+      </div>
+    </div>
+
+    <p-card>
+      <button style="  font-size: 11px; float: right;" (click)="addinvoice()" type="button" class="btn btn-danger"
+        data-bs-toggle="modal" data-bs-target=".transaction-detailModal"><svg xmlns="http://www.w3.org/2000/svg"
+          width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+        </svg>
+        Add Invoice</button>
+      <table class="table table-bordered dt-responsive nowrap sm dataTable no-footer dtr-inline"
+        style="font-size:small">
+        <thead>
+
+          <tr>
+            <th>#</th>
+            <th>Invoice Id</th>
+            <th scope="col-12">Invoice Number</th>
+            <th scope="col-12">Client Name</th>
+            <th scope="col-12">Date</th>
+            <th scope="col-12">Action</th>
+          </tr>
+
+
+        <tbody class="table-bordered dt-responsive  sm dtr-inline" style="font-size:small">
+          <tr class="odd" id="invoiceslip" style="  vertical-align: middle;"
+            *ngFor="let invoice of invoicedetails  | paginate: { id: 'invoicePagination', itemsPerPage: 10, currentPage: page, totalItems: totalCount }; let i=index">
+            <td>{{i+1}}</td>
+            <td class="sorting_1 dtr-control" (click)="edit(invoice.invoice_no)" style="color:blue; cursor: pointer;">
+              {{invoice.invoice_id}}
+            </td>
+            <td>{{invoice.invoice_no}}</td>
+            <td>{{invoice.client_name}}</td>
+            <td>{{invoice.invoice_date}}</td>
+            <td class="text-center">
+              <button (click)="view(invoice.invoice_id)" class="btn btn-primary waves-effect edit-btn waves-light" style="background-color: #19064c;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
+                  <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
+                </svg>
+              </button>
+              <button style="margin-left: 5px;background-color: #19064c;" class="btn btn-success waves-effect edit-btn waves-light"
+                (click)="downloadPdf(invoice.invoice_id)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-download" viewBox="0 0 16 16">
+                  <path
+                    d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                  <path
+                    d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                </svg>
+              </button>
+
+              <button style="margin-left: 5px;" (click)="deleteinvoice(invoice.invoice_id)"
+                class="btn btn-danger waves-effect edit-btn waves-light"><svg xmlns="http://www.w3.org/2000/svg"
+                  width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                  <path
+                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z" />
+                  <path
+                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z" />
+                </svg></button>
+
+            </td>
+          </tr>
+          <tr>
+            <td colspan="12" *ngIf="invoicedetails.length === 0" style="text-align: center; font-size: 0.8rem;">
+              No Data Found
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+      <pagination-controls id="invoicePagination" (pageChange)="pageChange($event)"
+      *ngIf="invoicedetails && invoicedetails.length"></pagination-controls>
+    </p-card>
+  </div>
+</main>
+
+
+<!-- invoiceSlip view -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .invoice-container {
+      width: 210mm;
+      height: 297mm;
+      margin: 0 auto;
+      border: 1px solid #000;
+      position: relative;
+    }
+
+    .view-screen {
+      width: 100%;
+      background-color: #fff;
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+    }
+
+    .invoice-header {
+      text-align: center;
+      font-size: 23px;
+      margin-top: 10px;
+    }
+
+    .customer-details {
+      margin: 20px;
+    }
+
+    .customer-details p {
+      margin: 5px;
+    }
+
+    .product-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .product-table th {
+      background-color: rgb(39, 119, 163);
+      color: white;
+    }
+
+    .product-table td {
+      padding: 5px;
+    }
+
+    .total {
+      margin: 20px;
+      text-align: right;
+    }
+
+    .bank-details {
+      border: 3px solid rgb(224, 220, 220);
+      border-radius: 5px;
+    }
+
+
+
+    .footer {
+      text-align: left;
+      margin: 20px;
+    }
+
+    .bank-details {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .bank-details tr {
+      border-bottom: 1px solid #ccc;
+    }
+
+    .bank-details td {
+      padding: 5px;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body *ngIf="view1" style="font-size: small;">
+  <div class="invoice-container">
+    <div class="view-screen">
+      <div class="invoice-header">
+        Invoice Details
+      </div>
+      <img style="height: 96x; width: 160px;" src="../../assets/pathbreakerlogo.png" alt="Logo" class="logo">
+
+      <div class="customer-details">
+        <p style="font-size: 20px;">To</p>
+        <p>Customer Name:{{ invoicedettails?.customer }}</p>
+        <p>Customer Mail:{{ invoicedettails?.mail_id }}</p>
+        <p>GST Number: {{ invoicedettails?.gst_number }}</p>
+        <p>Mobile Number: {{ invoicedettails?.mobile_number }}</p>
+        <p>Address: {{ invoicedettails?.address }}</p>
+      </div>
+      <div style="float: right;   margin-top: -148px ;margin-right: 10px;             ">
+        <p>Invoice No:{{invoicedettails?.invoice_no}}</p>
+        <p style="margin-top: 0PX;">Invoice Date:{{invoicedettails?.invoice_date}}</p>
+      </div>
+      <table class="product-table" style="padding: 10px;">
+        <thead let invoice of invoicedetails>
+          <tr>
+            <th>S.No</th>
+            <th>HSN Code</th>
+            <th>Product Details</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th>Amount(INR)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background-color: #f4f4f8;border-collapse: collapse;" class="odd"
+            *ngFor="let invoice of productdettails; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{ invoice.purchase_id }}</td>
+            
+            <td>{{ invoice.product_name }}</td>
+            <td>{{ invoice.count }}</td>
+            <td>{{ invoice.cost_per_unit }}</td>
+            <td>{{ (invoice.count * invoice.cost_per_unit).toFixed(2) }}</td>
+          </tr>
+
+        </tbody>
+      </table>
+      <div class="total" style="padding: -2%;margin-right: 200px;">
+        <p style="margin-right: -35px;">SGST(9%):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;   {{ invoicedettails?.sgst_amount }}</p>
+        <p style="background-color: #f4f4f8;margin-right: -35px;">CGST(9%):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  {{ invoicedettails?.cgst_amount }}</p>
+        <p style="margin-right: -65px;">IGST(18%):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;   {{ invoicedettails?.igst_amount }}</p>
+        <p style="background-color: #f4f4f8;margin-right: -65px;font-weight: bold;">Total: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ invoicedettails?.total }}</p>
+      </div>
+
+      <table class="bank-details">
+        <tr>
+          <td class="label">Bank Name</td>
+          <td>{{ invoicedettails?.bank_name }}</td>
+        </tr>
+        <tr>
+          <td class="label">Account Number</td>
+          <td>{{ invoicedettails?.account_number }}</td>
+        </tr>
+        <tr>
+          <td class="label">IFSC Code</td>
+          <td>{{ invoicedettails?.ifsc_code }}</td>
+        </tr>
+        <tr>
+          <td class="label">PAN Number</td>
+          <td>{{ invoicedettails?.pan_number }}</td>
+        </tr>
+        <tr>
+          <td class="label">GST Number</td>
+          <td>{{ invoicedettails?.gst_number }}</td>
+        </tr>
+      </table>
+
+
+
+
+      <div class="footer">
+        Pathbreaker IT Technologies PVT LTD<br>
+        Authorized Signature<br>
+        Place: Hyderabad
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

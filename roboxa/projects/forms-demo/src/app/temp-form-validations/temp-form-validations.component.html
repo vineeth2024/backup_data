@@ -1,0 +1,42 @@
+<div class="container">
+    <form #frmRegister="ngForm" class="mt-3 p-2">
+        <h2>Register Form</h2>
+        
+        <dl>
+            <dt>Username</dt>
+            <dd>
+                <input type="text" required ngModel #username="ngModel" name="username" minlength="4" maxlength="10">
+            </dd>
+            <dd class="text-danger" *ngIf="frmRegister.submitted && username.invalid">
+                <div *ngIf="username.errors?.['required']">Username is mandatory</div>  
+                <div *ngIf="username.errors?.['minlength']">Username must contain min 4 charecters</div>  
+                <div *ngIf="username.errors?.['maxlength']">Username must contain max 10 charecters</div>  
+            </dd>
+            <dt>Password</dt>
+            <dd>
+                <input type="password" ngModel 
+                #password="ngModel" required  
+                pattern="^(?=.*[a-z])(?=.*[A-Z]).{8,}$" name="password" id="">
+            </dd>
+            <dd class="text-danger" 
+            *ngIf="frmRegister.submitted && password.invalid">
+                <div *ngIf="password.errors?.['required']">Password is mandatory</div>
+                <div *ngIf="password.errors?.['pattern']">Password must contain atlest one uppercase</div>
+            </dd>
+            <dt>City</dt>
+            <dd>
+                <select (change)="CityChanged($event)" name="city" ngModel #city="ngModel">
+                    <option value=" ">Select your city</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Hyd">Hyderbad</option>
+                    <option value="Mumbai">Mumbai</option>
+                </select>
+            </dd>
+            <dd class="text-danger">
+                {{errorMsg}}
+            </dd>
+        </dl>
+        
+        <button class="btn btn-primary">Submit</button>
+    </form>
+</div>

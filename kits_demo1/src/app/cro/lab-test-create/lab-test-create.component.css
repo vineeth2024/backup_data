@@ -1,0 +1,31 @@
+.btn-primary {
+    background-color: #0073aa;
+border-color: #0073aa;
+color: #fff;
+}
+
+.btn-secondary {
+    background-color: #cccccc;;
+    border-color: #cccccc;;
+    color: #fff;
+  }
+
+  ::ng-deep .form-select option {
+    width: 100px; /* Adjust this value as needed */
+  }
+
+  ::ng-deep {
+   .countryPopup {
+    min-height: 20px !important;
+   }
+  }
+  .countryPopup {
+    max-width: 100px !important;
+  }
+  .custom-lab-header {
+    color: #757575;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Mada', sans-serif;
+  }
+  

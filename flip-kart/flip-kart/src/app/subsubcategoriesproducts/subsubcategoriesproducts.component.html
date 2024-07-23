@@ -1,0 +1,46 @@
+<!-- <div class="container">
+    <div *ngIf="products.length">
+      <div *ngFor="let product of products" class="product-card">
+        <div>
+        <img [src]="product.image" alt="{{ product.title }}" style="width: 400px; height: 400px; margin-top: 40px;">
+        </div>
+        <div class="col-md-6" style="margin-top: 40px;">
+        <h2>{{ product.title }}</h2>
+        <p>{{ product.description }}</p>
+        <p><strong>Price:</strong> ₹{{ getConvertedPrice(product.price) }}</p>
+        <p><strong>Rating:</strong>{{ product.rating.rate }} ({{ product.rating.count }} ratings)</p>
+        <button class="btn btn-primary" (click)="addtocart(product)">Add to Cart</button>
+      </div>
+      </div>
+    </div>
+    <div *ngIf="!products.length">
+      <p>No products found for this subsubcategory.</p>
+    </div>
+  </div>
+   -->
+
+   <div class="container">
+    <div *ngIf="products.length">
+      <div *ngFor="let product of products" class="product-card row" style="margin-top: 40px;">
+        <div class="col-md-6">
+          <!-- <img [src]="product.image" alt="{{ product.title }}" style="width: 100%; height: auto;"> -->
+          <img [src]="product.image"  alt="" style="width: 400px; height: 400px; margin-top: 20px;">
+          <div class="additional-images">
+            <img *ngFor="let img of product.additionalImages" [src]="img" alt="Additional image" class="additional-image"  (mouseover)="changeMainImage(product.id, img)">
+        </div>
+        <img [src]="mainImages[product.id]" alt="{{ product.title }}" class="main-product-image" style="width: 400px; height: 400px; margin-top:-380px; margin-left: 80px;">
+        </div>
+        <div class="col-md-6">
+          <h2>{{ product.title }}</h2>
+          <p>{{ product.description }}</p>
+          <p><strong>Price:</strong> ₹{{ getConvertedPrice(product.price) }}</p>
+          <p><strong>Rating:</strong> {{ product.rating?.rate }} ({{ product.rating?.count }} ratings)</p>
+          <button class="btn btn-primary" (click)="addtocart(product)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!products.length">
+      <p>No products found for this subsubcategory.</p>
+    </div>
+  </div>
+  

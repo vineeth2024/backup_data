@@ -1,0 +1,80 @@
+#datatable tbody tr {
+    margin-bottom: 5px; /* Adjust the value to decrease the space between rows */
+  }
+  
+  #datatable tbody td {
+    padding: 5px; /* Adjust the value to decrease the space inside each cell */
+  }
+  #datatable thead th {
+    padding: 5px; /* Adjust the value to decrease the space inside each header cell */
+    height: 10px;
+
+  }
+  .sort-icons i {
+    font-size: 15px; /* Adjust this value for icon size */
+    opacity: 0.5; /* Adjust this value to control icon opacity */
+    transition: opacity 0.3s;
+}
+
+.sort-icons i.active {
+    opacity: 2;
+    color: blue;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    color: #212529;
+    
+}
+.custom-users-header {
+  color: #757575;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Mada', sans-serif;
+}
+
+/* h4 { */
+  /* text-transform: uppercase; */
+/* } */
+th, td {
+  font-family: 'Mada', sans-serif !important; /* Apply font-family to both th and td */
+}
+th {
+  height: 10px;
+  padding: 5px;
+  /* padding: 8px 16px; */
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+  unicode-bidi: isolate;
+  text-align: center;
+  padding-left: 36px;
+}
+.table th {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+}
+.table td {
+  color: #212529;
+  font-size: .875em;
+  font-weight: 400;
+  text-align: center;
+  
+}
+.text-muted {
+  /* --bs-text-opacity: 1; */
+  color: #212529;
+  font-size: .875em;
+  font-weight: 400;
+  text-align: center;
+}
+.btn-primary {
+  background-color: #0073aa;
+border-color: #0073aa;
+color: #fff;
+}
+.custom-search-input {
+  height: 35px;
+  padding: 3px 10px;
+}
+

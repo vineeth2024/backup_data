@@ -1,0 +1,111 @@
+/* .form-control {
+    border-radius: 3px;
+    width: 400px;
+    margin-left: 20px;
+    
+}
+.search-icon{
+    position: absolute;
+    z-index: 10;
+    right:55%;
+    top:22px;
+    color: blue;
+}
+.with-box-shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+} */
+
+
+.menu-bar {
+    background-color: #141d28;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;
+}
+
+.menu-bar ul {
+    list-style: none;
+    display: flex;
+    margin-top: 15px;
+}
+
+.menu-bar ul li {
+    position: relative;
+}
+
+.menu-bar ul li a {
+    font-size: 20px;
+    color: aliceblue;
+    text-decoration: none;
+    transition: all 0.3s;
+    margin-right: 20px; /* Adjust margin between menu items */
+    position: relative; /* Ensure proper positioning for dropdown */
+}
+
+.menu-bar ul li a:hover {
+    color: #0073ff;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    background-color: #141d28;
+    padding: 10px;
+    z-index: 1;
+}
+
+.menu-bar ul li:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu ul li {
+    margin-bottom: 10px; /* Adjust space between dropdown items */
+}
+
+.dropdown-menu ul li a {
+    color: aliceblue;
+    text-decoration: none;
+    display: block; /* Display dropdown items vertically */
+}
+
+.dropdown-menu ul li a:hover {
+    color: #0073ff;
+}
+
+/* .hero {
+    position: relative;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.overlay-text h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.overlay-text p {
+    font-size: 18px;
+    margin-top: 0;
+} */
+
+
+  

@@ -1,0 +1,33 @@
+<h2>Users</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.age }}</td>
+      <td>
+        <button (click)="updateUser(user)">Update</button>
+        <button (click)="deleteUser(user.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Add User</h2>
+
+<form (submit)="addUser()">
+  <label>Name: </label>
+  <input type="text" [(ngModel)]="newUser.name" name="name">
+  <label>Age: </label>
+  <input type="number" [(ngModel)]="newUser.age" name="age">
+  <button type="submit">Add User</button>
+</form>

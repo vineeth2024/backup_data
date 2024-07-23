@@ -1,0 +1,34 @@
+.hero {
+    position: relative;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.overlay-text h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.overlay-text p {
+    font-size: 18px;
+    margin-top: 0;
+}
+.square-images {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.text-below {
+    text-align: center; /* Adjust text alignment as needed */
+    margin-top: 10px; /* Adjust margin as needed */
+    font-size: 14px; /* Adjust font size as needed */
+    color: #333; /* Adjust text color as needed */
+    cursor: pointer; /* Change cursor to hand symbol */
+}

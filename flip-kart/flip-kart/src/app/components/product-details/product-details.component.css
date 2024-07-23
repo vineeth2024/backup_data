@@ -1,0 +1,31 @@
+.btn-size {
+    width: 40px; 
+    height: 40px; 
+}
+.custom-modal-dialog {
+    max-width: 950px; /* Adjust the width as needed */
+  }
+
+.additional-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: -70px;
+    margin-top: -370px;
+  }
+  
+.additional-image {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid rgb(0,0,0,0.2);
+    
+}
+
+.additional-image:hover {
+    transform: scale(1.1);
+}
+
+  

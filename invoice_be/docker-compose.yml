@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+  invoice-app:
+    container_name: invoice-app
+    profiles:
+      - invoice-app
+    build: .
+    image: invoice-app
+    ports:
+    - "8001:8000"
+    volumes:
+      - ./:/home/app
+
+  invoice-db:
+    container_name: invoice-db
+    profiles:
+      - invoice-db
+    image: postgres:15.1
+    restart: unless-stopped
+    ports:
+    - "5433:5432"
+    environment:
+       POSTGRES_PASSWORD: Invoice@!23
+       POSTGRES_USER: invoice
+       POSTGRES_DATABASE: invoice
+    volumes:
+      - /invoice-data:/var/lib/postgresql/data
+        #networks:
+        # default:
+        #name: nginxproxymanager
+        #external: true
+

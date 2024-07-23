@@ -1,0 +1,60 @@
+<div class="bg-img">
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+            <div class="card" style="width: 26rem; align-items: center;">
+
+                <div class="card-body">
+                    <div>
+                        <img src="../../assets/pathbreakerlogo.png" style="max-width: 150px; margin-left: 101px;"
+                            alt="Logo">
+                    </div>
+
+                    <div>
+                        <h6 style="color: rgb(1, 1, 29);margin-left: 76px;">Welcome To PATHBREAKER!</h6>
+                    </div>
+                    <br>
+                    <div>
+                        <form  [formGroup]="loginform">
+                            <div>
+                                <label>User Name</label>
+                                <input style="width:350px;" type="text" placeholder="Enter User Name"
+                                    formControlName="email"
+                                    [ngClass]="{'is-invalid': submitted && loginform.get('email')?.errors}"
+                                    class="form-control">
+                                <!-- <input style="width:350px;"  *ngIf="!enable" placeholder="Enter User Name" [attr.disabled]="true"  formControlName="user_name"
+                            class="form-control"> -->
+                            </div>
+                          
+                            <div >
+                                <label> Password</label>
+                                <input type="password" placeholder="Enter Password" 
+                                [ngClass]="{'is-invalid': submitted && loginform.get('password')?.errors}"formControlName="password"
+                                    class="form-control">
+                            </div>
+                            
+                            <br>
+                            <div class="col" *ngIf="enable">
+                                <button type="button" (click)="otp()" class="btn btn-danger"
+                                    style="float: right;width: 100%;">Send OTP</button>
+                            </div>
+                            <br>
+                            <div *ngIf="disable">
+                                <button type="button" style="width: 100%;" (click)="login()"
+                                    class="btn btn-danger">Login</button>
+                            </div>
+                            <!-- <div *ngIf="disable" class="mt-4 text-center">
+                                <a href="#" class="text-muted" data-bs-toggle="modal"
+                                    data-bs-target=".transaction-detailModal"><i class="mdi mdi-lock me-1"></i> Forgot
+                                    Your
+                                    Password ?</a>
+                            </div> -->
+                        </form>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>

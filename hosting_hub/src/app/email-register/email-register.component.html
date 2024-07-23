@@ -1,0 +1,236 @@
+
+<!--Main Navigation-->
+<header>
+  <!-- Sidebar -->
+  <!-- <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse " style="background: linear-gradient(45deg, #312a42, #312a42);font-size: small;"> -->
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse">
+      <div class="position-sticky" >
+      <div class="list-group list-group-flush mx-3 mt-4">
+          <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+            <div *ngIf="dashboardrole">
+            <li class="nav-item">
+              <a style="color: rgb(221, 225, 229);" href="/dashboard" class="nav-link px-0 align-middle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                      <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+                    </svg>
+                    &nbsp;<span class="ms-1 d-none d-sm-inline">Home</span>
+              </a>
+           </li>
+          </div>
+        <div *ngIf="adminrole">
+          <li class="nav-item">
+            <a style="color: rgb(221, 225, 229);" href="/admin-view" class="nav-link px-0 align-middle custom-font">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+              </svg>&nbsp;
+              <span class="ms-1 d-none d-sm-inline">Admin</span>
+            </a>
+          </li>
+        </div>
+          <div *ngIf="domainrole">
+            <li class="nav-item">
+              <a style="color: rgb(221, 225, 229);" href="/domain-view" class="nav-link px-0 align-middle">
+                  <i class="fas fa-globe" style="font-size: 16px;"></i>&nbsp;<span class="ms-1 d-none d-sm-inline">Domains</span>
+              </a>
+            </li>
+          </div>
+          <div *ngIf="hostingrole">
+            <li class="nav-item">
+              <a style="color: rgb(221, 225, 229);" href="/hosting-view" class="nav-link px-0 align-middle">
+                <i class="pi pi-database" style="color: rgb(221, 225, 229);"></i>&nbsp;
+                <span class="ms-1 d-none d-sm-inline">Host</span>
+              </a>
+            </li>
+          </div>
+            <div *ngIf="hostdomainrole">
+              <li class="nav-item">
+                <a href="/hostdomainmap-view" class="nav-link px-0 align-middle">
+                  <i class="fas fa-map-marked-alt" style="color: rgb(221, 225, 229);"></i>&nbsp;
+                  <span class="ms-1 d-none d-sm-inline" style="color: rgb(221, 225, 229);">Hostdomain Map</span>
+                </a>
+              </li>
+            </div>
+             <div *ngIf="emailrole"> 
+              <li class="nav-item">
+                <a style="color: rgb(221, 225, 229);" href="email-view" class="nav-link px-0 align-middle">
+                  <i class="bi bi-shield-lock" style="font-size: 16px;"></i>&nbsp;
+                  <span class="ms-1 d-none d-sm-inline">Credentials</span>
+                </a>
+              </li>
+             </div>
+              <div *ngIf="itreturnsrole">
+                <li class="nav-item">
+                  <a style="color: rgb(221, 225, 229);" href="/it-view" class="nav-link px-0 align-middle">
+                    <i class="pi pi-id-card" style="font-size: 16px;"></i>&nbsp;
+                    <span class="ms-1 d-none d-sm-inline">IT Credentials</span>
+                  </a>
+                </li>
+              </div>
+            <div *ngIf="passwordsrole">
+              <li class="nav-item">
+                <a style="color: rgb(221, 225, 229);" href="/passwords-list" class="nav-link px-0 align-middle">
+                  <i class="pi pi-lock" style="font-size: 16px;"></i>&nbsp;
+                  <span class="ms-1 d-none d-sm-inline">Password Expiry List</span>
+                </a>
+              </li>
+            </div>
+          </ul>
+      </div>
+    </div>
+    
+  </nav>
+  <!-- Sidebar -->
+
+  <!-- Navbar -->
+  <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light  fixed-top" style="background: linear-gradient(45deg, #000B19, #000B19);">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Toggle button -->
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#sidebarMenu"
+        aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <!-- Brand -->
+      <a class="navbar-brand">
+        <img src="../../assets/pbt.png" class="bottom" style="height: 65px; width: 180px ; left: 0;"
+          loading="lazy" />
+      </a>
+      <!-- Search form -->
+    
+       
+      <!-- Right links -->
+      <ul class="navbar-nav ms-auto d-flex flex-row">
+        <!-- Notification dropdown -->
+        
+
+        <!-- Icon -->
+        <li class="nav-item me-3 me-lg-0">
+          <!-- <a class="nav-link">
+            <i class="fab fa-github"></i>
+          </a> -->
+        </li>
+  
+          <p-dialog header="Confirmation" [(visible)]="displayDialog"  [modal]="true" style="border-radius: 100%;">
+            <p>Are you sure you want to Logout ?</p>
+            <p-footer>
+              <button type="button" pButton icon="pi pi-check" style="background-color: #000B19;" (click)="logout()" label="Yes"></button>&nbsp;&nbsp;&nbsp;&nbsp;
+              <button type="button" pButton icon="pi pi-times" style="background-color: #000B19;" (click)="cancelLogout()" label="No"></button>
+            </p-footer>
+          </p-dialog>              
+           <button  style="height: 50px; width: 60px; background-color: #000B19;font-style:roman;border: #000B19;margin-top:0% ;" pButton type="button" icon="pi pi-power-off" (click)="showDialog()"></button>
+    
+  
+          <!-- Avatar -->
+       
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+        </ul>
+      </div>        
+      <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+  </header>
+  <!--Main Navigation-->
+  
+  <!--Main layout-->
+  
+  <!--Main layout-->
+  <main style="margin-top: 92px;">
+    <div class="container pt-4" style="background-color: #eaeaf1;">
+    <div style="padding:1" *ngIf="!view"
+      class="page-title-box d-sm-flex align-items-center justify-content-between">
+      <h4 *ngIf="!isEdit" class="mb-sm-0 font-size-18"><i class="bx bxs-user-check"></i>Add Domain Credentials</h4>
+      <h4 *ngIf="isEdit" class="mb-sm-0 font-size-18"><i class="bx bxs-user-check"></i>Edit Domain Credentials</h4>
+      <div class="page-title-right">
+        <ol class="breadcrumb m-0">
+          <li class="breadcrumb-item"> <a routerLink="/dashboard" class="waves-effect">Dashboard</a>
+          </li>
+          <li class="breadcrumb-item"><a routerLink="/email-view" class="waves-effect">Domain Credentials List</a></li>
+          <li *ngIf="!isEdit" class="breadcrumb-item active">Add Domain Credentials</li>
+          <li *ngIf="isEdit" class="breadcrumb-item active">Edit Domain Credentials</li>
+        </ol>
+      </div>
+    </div>
+    <div style="padding:1px" *ngIf="view"
+      class="page-title-box d-sm-flex align-items-center justify-content-between">
+      <h4 class="mb-sm-0 font-size-18"><i class="bx bxs-user-check"></i>View Domain Credentials</h4>
+
+      <div class="page-title-right">
+        <ol class="breadcrumb m-0">
+          <li class="breadcrumb-item"> <a routerLink="/dashboard" class="waves-effect">Dashboard</a>
+          </li>
+          <li class="breadcrumb-item"><a routerLink="/email-view" class="waves-effect">Domain Credentials List</a></li>
+          <li class="breadcrumb-item active">View Domain Credentials</li>
+
+        </ol>
+      </div>
+    </div>
+
+    <p-toast></p-toast>
+    <div class="card ml-2 mr-2 bg-white" style="width: 1100px; height: 400px;margin-top: 20px;">
+        <div class="container-fluid">
+            <div class="card-body">
+              <div class="container">
+                <div class="card-body">
+                  <!-- <h4 style="color: rgba(15, 2, 2, 0.89);">Admin Registration</h4> -->
+                  <!-- <hr> -->
+                  <form [formGroup]="myForm">
+                    <div class="row">
+                      
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="email">Email Id:</label>
+                            <input style="font-size: small;" type="email" placeholder="Enter Email Id " class="form-control"[ngClass]="{'is-invalid': submitted && myForm.controls['email'].errors}"
+                            formControlName="email" required maxlength="35">
+                            <span *ngIf="myForm.get('email')?.hasError('required') && myForm.get('email')?.touched" class='text-danger' padding>Email Id is required</span><br>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="username">Username:</label>
+                            <input style="font-size: small;" type="text" placeholder="Enter Username" class="form-control" [ngClass]="{'is-invalid': submitted && myForm.controls['username'].errors}"
+                            formControlName="username" maxlength="30">
+                            <span *ngIf="myForm.get('username')?.hasError('required') && myForm.get('username')?.touched" class='text-danger' padding>Username is required</span><br>
+                        </div>
+                      </div>
+                     
+                      <div class="col-md-6">
+                        <div class="form-group position-relative">
+                          <label for="password">Password:</label>
+                          <div class="input-group">
+                            <input style="font-size: small;" type="{{ showPassword ? 'text' : 'password' }}" placeholder="Enter Password" maxlength="10" class="form-control"
+                              [ngClass]="{'is-invalid': submitted && myForm.controls['password'].errors}" formControlName="password">
+                              <i class="fas eye-icon" (click)="togglePasswordVisibility()" [ngClass]="showPassword ? 'fa-eye' : 'fa-eye-slash'"></i>
+  
+                          </div>
+                          <span *ngIf="myForm.get('password')?.hasError('required') && myForm.get('password')?.touched" class='text-danger'>Password is required</span>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>Select Domain Name</label>
+                            <!-- <input type="text" formControlName="customer_name"> -->
+                            <select style="font-size: small;" formControlName="domainName"
+                                class="form-select form-control">
+                                <option selected value="">Select Domain Name </option>
+                                <option *ngFor="let domain of domains" [value]="domain.domainName">
+                                    {{ domain.domainName }}
+                                </option>
+                            </select>
+                            <span *ngIf="myForm.get('domainName')?.hasError('required') && myForm.get('domainName')?.touched" class='text-danger' padding>Domain Name is required</span><br>
+                        </div>
+                      </div>
+
+                </div><br>
+                <button type="button" *ngIf="!view" class="btn btn-danger"  (click)="onsubmit()"  style="float: right;">Submit</button>
+              </form>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+      
+  
+  

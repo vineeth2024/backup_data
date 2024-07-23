@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-6">
+            <h3 class="text-center">Registration Form - MVC</h3>
+            <div class="form-group">
+                <label for="">Enter FirstName:</label>
+                <input type="text" [(ngModel)]="firstName" class="form-control" name="" id="">
+            </div>
+            <div class="form-group">
+                <label for="">Enter LastName:</label>
+                <input type="text" [(ngModel)]="lastName" class="form-control" name="" id="">
+            </div>
+            <div class="form-group">
+                <label for="">Enter Email:</label>
+                <input type="text" [(ngModel)]="email" class="form-control" name="" id="">
+            </div>
+            <div class="form-group">
+                <label for="">Enter DOB:</label>
+                <input type="text" [(ngModel)]="dob" class="form-control" name="" id="">
+            </div>
+            <div class="form-group">
+                <label for="">Select City:</label>
+                <Select [(ngModel)]="city" class="form-control" name="" id="">
+                    <option>HYD</option>
+                    <option>MUMBAI</option>
+                    <option>VIZAG</option>
+                </Select>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="mt-4">
+                <dl>
+                    <dt>FirstName</dt>
+                    <dd>{{firstName}}</dd>
+                    <dt>LastName</dt>
+                    <dd>{{lastName}}</dd>
+                    <dt>Email</dt>
+                    <dd>{{email}}</dd>
+                    <dt>DOB</dt>
+                    <dd>{{dob}}</dd>
+                    <dt>City</dt>
+                    <dd>{{city}}</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-6">
+            <h3 class="text-center">Login Form - MVVM</h3>
+            <div class="form-group">
+                <label for="">Enter Username</label>
+                <input type="text" ngModel #username="ngModel" class="form-control" name="" id="">
+            </div>
+            <div class="form-group">
+                <label for="">Enter Password</label>
+                <input type="password" ngModel #password="ngModel" class="form-control" name="" id="">
+            </div>
+        </div>
+        <div class="col-6">
+            Username is: {{username.value}}<br>
+            Password is: {{password.value}}
+        </div>
+    </div>
+</div>

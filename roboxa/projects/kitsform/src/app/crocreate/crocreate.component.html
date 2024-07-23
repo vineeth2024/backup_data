@@ -1,0 +1,16 @@
+<form [formGroup]="CroForm">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <label>CRO Code</label><label style="color: white;margin-left: 4px;">*</label>
+          <input autocomplete="off" type="text" class="form-control" id="CROCode" maxlength="10"
+            placeholder="Enter CRO Code" formControlName="cro_code">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+            <label>CRO Name</label><label style="color: white;margin-left: 4px;">*</label>
+            <input autocomplete="off" type="text" class="form-control" id="CROName" maxlength="10"
+             placeholder="Enter CRO Name" formControlName="cro_name">
+        </div>
+      </div>

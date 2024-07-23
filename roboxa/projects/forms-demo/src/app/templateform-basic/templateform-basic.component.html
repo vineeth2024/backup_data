@@ -1,0 +1,31 @@
+<div class="container">
+    <form #frmRegister="ngForm" 
+    class="p-2" [ngClass]="{'invalid-style':frmRegister.invalid,'valid-style':frmRegister.valid}"
+    (submit)="Register(frmRegister.value)">
+        <h2>Registration Form</h2>
+        <dl>
+            <dt>Username</dt>
+            <dd>
+                <input type="text" required maxlength="10" name="username" minlength="4" ngModel #Username="ngModel" >
+            </dd>
+            <dd *ngIf="(Username.errors?.['required']&& Username.invalid)&&(Username.dirty && Username.invalid)||(Username.touched && Username.invalid)">
+               Username mandatory
+            </dd>
+            <dt>Age</dt>
+            <dd>
+                <input type="number" required min="18" max="40" name="Age" ngModel #Age="ngModel" id="">
+            </dd>
+            <dt>City</dt>
+            <dd>
+                <select name="city" #city="ngModel" required ngModel id="">
+                    <option>Hyderbad</option>
+                    <option>Goa</option>
+                    <option>Vizag</option>
+                    <option>Mumbai</option>
+                </select>
+            </dd>
+        </dl>
+        <button [disabled]="frmRegister.invalid">Register</button>
+        <button *ngIf="frmRegister.dirty">Save to Draft</button>
+    </form>
+</div>

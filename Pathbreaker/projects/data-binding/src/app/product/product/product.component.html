@@ -1,0 +1,43 @@
+<div class="container">
+    <h2 class="text-center">one-way data binding</h2>
+    <div class="row">
+        <div class="col-3">
+            <dl>
+                <dt>Name</dt>
+                <dd>{{prodName}}</dd>
+                <dt>Price</dt>
+                <dd>{{prodPrice}}</dd>
+                <dt>Image</dt>
+                <dd><img [src]="prodImage" height="150" width="150" alt=""></dd>
+                <dt>Stock Availability</dt>
+                <dd><input type="checkbox" [checked]="inStock"><span>{{inStock == true ? "Available":"Out of Stock"}}</span> </dd>
+            </dl>
+        </div>
+        <div class="col-3 mt-4">
+            <div class="card" style="width:18rem;">
+            <img class="card-img-top" [border]="imgBorder" [src]="prodImage" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{prodName}}</h5>
+                <a href="#" class="btn btn-primary">click here for more info</a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 mt-4">
+            <table border="1" [attr.height]="trheight" [width]="trwidth">
+                <tr>
+                    <th>ProductName</th>
+                    <th>Price</th>
+                    <th>Stock Availability</th>
+                </tr>
+                <tr>
+                    <td>{{prodName}}</td>
+                    <td>{{prodPrice}}</td>
+                    <td>{{inStock == true ? "Available":"Out of Stock"}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>

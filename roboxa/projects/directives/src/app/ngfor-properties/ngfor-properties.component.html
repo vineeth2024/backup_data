@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="mt-4">
+        <table class="table table-hover">
+           <thead>
+                <tr>
+                    <th>Preview</th>
+                    <th>Index</th>
+                    <th>Even</th>
+                    <th>Odd</th>
+                    <th>First</th>
+                    <th>Last</th>
+                </tr>
+           </thead>
+           <tbody>
+            <tr [class.odd]="o" [class.even]="e" *ngFor="let item of products; let i=index; let e=even; let o=odd; let f=first; let l=last;">
+                <td>
+                    <img [src]="item.image" width="75" height="75" alt="">
+                </td>
+                <td>{{i}}</td>
+                <td>{{o}}</td>
+                <td>{{e}}</td>
+                <td>{{f}}</td>
+                <td>{{l}}</td>
+            </tr>
+           </tbody>
+        </table>
+    </div>
+</div>

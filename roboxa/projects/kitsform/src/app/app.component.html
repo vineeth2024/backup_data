@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>Register Form</h2>
+  <form [formGroup]="frmRegister" (submit)="SubmitClick(frmRegister.value)">
+      <dl>
+          <dt>Username</dt>
+          <dd>
+              <input formControlName="Username" type="text" name="Username" id="">
+          </dd>
+          <dt>Age</dt>
+          <dd>
+              <input type="number" formControlName="Age" name="Age" id="">
+          </dd>
+          <dt>Mobile</dt>
+          <dd>
+              <input type="text"  formControlName="Mobile" name="Mobile" id="">
+          </dd>            
+      </dl>
+      <button>Register</button>
+  </form>
+</div>

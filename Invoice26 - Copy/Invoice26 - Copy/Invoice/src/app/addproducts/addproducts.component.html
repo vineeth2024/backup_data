@@ -1,0 +1,192 @@
+
+<!--Main Navigation-->
+<header>
+    <!-- Sidebar -->
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse " style="background: linear-gradient(45deg, #19064c, #022638);font-size: small;">
+        <div class="position-sticky" >
+        <div class="list-group list-group-flush mx-3 mt-4">
+            <ul  class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                <li class="nav-item">
+                    <a style="color: rgb(230, 235, 240);" href="/dashboard" class="nav-link px-0 align-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+                          </svg><span class="ms-1 d-none d-sm-inline">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a style="color: rgb(230, 235, 240);"  href="/admin-profile" class="nav-link px-0 align-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                          </svg> <span class="ms-1 d-none d-sm-inline">Admin Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a style="color: rgb(230, 235, 240);"  href="/customer-grid"  class="nav-link px-0 align-middle ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                            <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                          </svg><span class="ms-1 d-none d-sm-inline">Customers</span></a>
+                    
+                </li>
+                <li>
+                    <a style="color: rgb(230, 235, 240);"  href="/invoice-grid" class="nav-link px-0 align-middle ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journals" viewBox="0 0 16 16">
+                            <path d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2 2 2 0 0 1-2 2H3a2 2 0 0 1-2-2h1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1H1a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v9a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z"/>
+                            <path d="M1 6v-.5a.5.5 0 0 1 1 0V6h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V9h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 2.5v.5H.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1H2v-.5a.5.5 0 0 0-1 0z"/>
+                          </svg><span class="ms-1 d-none d-sm-inline">Invoices</span></a>
+                    
+                </li>
+  
+                <li>
+                    <a style="color: rgb(230, 235, 240);"  href="/product-grid" class="nav-link px-0 align-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                          </svg>  <span class="ms-1 d-none d-sm-inline">Products</span> </a>
+                </li>
+                <li>
+                    <a style="color: rgb(230, 235, 240);"  href="/a-grid"
+                    class="nav-link px-0 align-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bank2" viewBox="0 0 16 16">
+                            <path d="M8.277.084a.5.5 0 0 0-.554 0l-7.5 5A.5.5 0 0 0 .5 6h1.875v7H1.5a.5.5 0 0 0 0 1h13a.5.5 0 1 0 0-1h-.875V6H15.5a.5.5 0 0 0 .277-.916l-7.5-5zM12.375 6v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zM8 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM.5 15a.5.5 0 0 0 0 1h15a.5.5 0 1 0 0-1H.5z"/>
+                          </svg> <span class="ms-1 d-none d-sm-inline">Accounts</span> </a>
+                   
+                </li>
+                <li>
+                    <a style="color: rgb(230, 235, 240);"  href="/user-grid" class="nav-link px-0 align-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                          </svg><span class="ms-1 d-none d-sm-inline">Users</span> </a>
+                  
+                </li>
+             
+            </ul>
+        
+        </div>
+      </div>
+      <p-dialog header="Confirmation" [(visible)]="displayDialog"  [modal]="true" style="border-radius: 90%;">
+        <p>Are you sure you want to log out?</p>
+        <p-footer>
+          <button type="button" pButton icon="pi pi-check" style="background-color: #19064c;" (click)="logout()" label="Yes"></button>&nbsp;&nbsp;&nbsp;
+          <button type="button" pButton icon="pi pi-times" style="background-color: #19064c;" (click)="cancelLogout()" label="No"></button>
+        </p-footer>
+      </p-dialog>              
+      <button   style="height: 20px; width: fit-content; background-color: rgb(42, 42, 54);font-style:roman;border: 1px Solid rgb(23, 23, 35);margin-top:70% ;" pButton type="button" icon="pi pi-power-off" (click)="showDialog()">LOGOUT</button>
+    </nav>
+    <!-- Sidebar -->
+  
+    <!-- Navbar -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light  fixed-top" style="background: linear-gradient(45deg, #ffff, #0a0a29);box-shadow: 1px 1px 15px rgba(200, 208, 236, 0.825);
+  
+  
+  
+  
+  
+    ">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#sidebarMenu"
+          aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+  
+        <!-- Brand -->
+        <a class="navbar-brand">
+          <img src="../../assets/pathbreakerlogo.png" height="55"
+            loading="lazy" />
+        </a>
+        <!-- Search form -->
+      
+  
+        <!-- Right links -->
+        <ul class="navbar-nav ms-auto d-flex flex-row">
+          <!-- Notification dropdown -->
+          
+  
+          <!-- Icon -->
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+  
+    
+  
+          <!-- Avatar -->
+       
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+        </ul>
+      </div>        
+      <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+  </header>
+  <!--Main Navigation-->
+  
+  <!--Main layout-->
+  
+  <!--Main layout-->
+  <main style="margin-top: 70px;">
+    <!-- Correct viewport settings -->
+    <div class="container pt-4" style="background-color: #eaeaf1;">  
+        <div class="card-body">
+    <h5 *ngIf="!isEdit">Add Product</h5>
+    <h5 *ngIf="isEdit"> Edit Product </h5>
+
+    <div aria-label="breadcrumb" style="float: right;margin-top: -33px;list-style-type: none;">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a  href="/dashboard">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="/product-grid">Product View</a></li>
+        <li *ngIf="!isEdit" class="breadcrumb-item active">Add Customer</li>
+        <li *ngIf="isEdit" class="breadcrumb-item active">Edit Product</li>
+      </ol>
+    </div>
+    </div>
+    <div class="card ml-2 mr-2 bg-white" style="width: 950px; height: 350px;margin-top: 50px;">
+        <div class="container-fluid">
+            <div class="card-body">
+                <form [formGroup]="productform">
+                <div class="row">
+                    <div class="col-6"><label for="product_name">Product Name</label>
+                        <input type="text" placeholder="Enter Product Name" [ngClass]="{'is-invalid': submitted && productform.controls['product_name'].errors}"
+                         class="form-control" formControlName="product_name">
+                    </div>
+                    <div class="col-6">
+                        <label>Product Cost</label>
+                        <input type="text" placeholder="Enter Product Name" class="form-control"
+                        [ngClass]="{'is-invalid': submitted && productform.controls['productcost'].errors}"   formControlName="productcost">
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="col-6 ">
+                        <label class="primary">HSN No</label>
+                        <input type="text" placeholder="Enter HSN No" class="form-control" 
+                        [ngClass]="{'is-invalid': submitted && productform.controls['hsn_no'].errors}"    formControlName="hsn_no">
+                    </div>
+                    <div class="col-6">
+                        <label>CGST</label>
+                        <input type="text" placeholder="Enter CGST" class="form-control"
+                         formControlName="cgst">
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="col-6">
+                        <label>SGST</label>
+                        <input type="text" placeholder="Enter SGST " class="form-control" formControlName="sgst">
+                    </div>
+                    <div class="col-6">
+                        <label>IGST</label>
+                        <input type="text" placeholder="Enter IGST " class="form-control" formControlName="igst">
+                    </div>
+                </div>
+                <br>
+                <button type="button" class="btn btn-danger"  (click)="submit()"  style="float: right;">Submit</button>
+                <br>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

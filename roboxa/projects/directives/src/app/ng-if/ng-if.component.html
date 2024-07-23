@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <h2 class="text-center">Product Details</h2>
+    <div *ngIf="toggleDesc.value">
+        <textarea rows="4" class="description" cols="40" disabled>
+            {{product.description}}
+        </textarea>
+    </div>
+</div>
+<div>
+    <div class="form-switch">
+        <input type="checkbox" class="form-check-input" ngModel #toggleDesc="ngModel" name="" id="">
+    </div>
+</div>
+<dl>
+    <dt>Title</dt>
+    <dd>{{product.title}}</dd>
+    <dt>Price</dt>
+    <dd>{{product.price}}</dd>
+    <dt>Preview</dt>
+    <dd>
+        <img [src]="product.image" height="150" width="150" alt="">
+    </dd>
+    <dt>Rating</dt>
+    <dd>
+        <span class="bi bi-star-fill text-success"></span>
+        {{product.rating.rate}} - {{product.rating.count}}
+    </dd>
+</dl>

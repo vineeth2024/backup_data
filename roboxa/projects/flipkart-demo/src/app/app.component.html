@@ -1,0 +1,36 @@
+<div class="container">
+    <header class="d-flex p-2 justify-content-between">
+        <div>
+            <h2>Flipkart</h2>
+        </div>
+        <nav>
+            <button (click)="CategoryChanged('all')" class="btn">Home</button>
+            <button (click)="CategoryChanged('electronics')" class="btn">Electronics</button>
+            <button (click)="CategoryChanged('jewelery')" class="btn">Jewelery</button>
+            <button (click)="CategoryChanged('')" class="btn">Men's clothing</button>
+            <button (click)="CategoryChanged('')" class="btn">Women's clothing</button>
+        </nav>
+        <div>
+            <button class="btn"><span class="bi bi-search"></span></button>
+            <button class="btn"><span class="bi bi-heart"></span></button>
+            <button class="btn"><span class="bi bi-person"></span></button>
+            <button (click)="ToggleCartItems()" class="btn">
+                <span class="bi bi-cart">
+                    <span class="badge rounded rounded-circle bg-danger text-white position-absolute">{{cartItemsCount}}</span>
+                </span>
+            </button>
+
+        </div>
+    </header>
+    <div class="bg-dark text-white text-center p-2 m-3">
+        HAPPY HOLIDAY DEALS ON EVERYTHING
+    </div>
+    <section class="row mt-3">
+        <nav class="col-3">
+            <div>
+                <label class="form-label"></label>
+                
+            </div>
+        </nav>
+    </section>
+</div>

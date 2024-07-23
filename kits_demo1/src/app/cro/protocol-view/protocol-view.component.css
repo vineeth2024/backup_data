@@ -1,0 +1,9 @@
+.p-card .p-card-body {
+    padding-top: 0px !important;
+}
+.custom-study-header {
+    color: #757575;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Mada', sans-serif;
+  }

@@ -1,0 +1,29 @@
+<h1>CRUD Example with Angular + WebAPI</h1>
+<hr>
+<div>
+  <a routerLink="insert">Click Here for Insert a New Record</a>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>
+<table  border="1">
+  <tr>
+    <th>Eno</th>
+    <th>Ename</th>
+    <th>Job</th>
+    <th>Salary</th>
+    <th>Dname</th>
+    <th>Edit | Delete</th>
+  </tr>
+  <tr *ngFor="let emp of employees">
+    <td>{{emp.Eno}}</td>
+    <td>{{emp.Ename}}</td>
+    <td>{{emp.Job}}</td>
+    <td>{{emp.Salary}}</td>
+    <td>{{emp.Dname}}</td>
+    <td>
+      <a routerLink='edit/{{emp.Eno}}'>Edit</a> &nbsp;&nbsp;
+      <a routerLink='delete/{{emp.Eno}}'>Delete</a> &nbsp;&nbsp;
+    </td>
+  </tr>
+</table>
